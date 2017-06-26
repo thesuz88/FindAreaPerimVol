@@ -15,27 +15,36 @@ public class Main {
         while(true) {
         do {
             //User entered length of room
-            System.out.println("Enter length of room: ");
-            while (!scnr.hasNextDouble()) {
+            System.out.print("Enter length of room: ");
+            while (!scnr.hasNextDouble()) { //iterates when input is not a valid number
                 String input = scnr.next();
-                System.out.println(input + " is not a valid number. Enter length of room: ");
+                System.out.println(input + " is not a valid number.");
+                System.out.print("Enter length of room: ");
             }
             lengthOfRoom = scnr.nextDouble();
-            } while (lengthOfRoom < 0);
+            } while (lengthOfRoom < 0); //exits loop when user enters valid positive number
 
         do {
             //User entered width of room
-            System.out.println("Enter width of room: ");
+            System.out.print("Enter width of room: ");
             while (!scnr.hasNextDouble()) {
                 String input2 = scnr.next();
-                System.out.println(input2 + " is not a valid number. Enter width of room: ");
+                System.out.println(input2 + " is not a valid number.");
+                System.out.print("Enter width of room: ");
             }
             widthOfRoom = scnr.nextDouble();
         } while (widthOfRoom < 0);
 
-                //User entered height of room
-                System.out.println("Enter height of room: ");
-                heightOfRoom = scnr.nextDouble();
+        do {
+            //User entered height of room
+            System.out.print("Enter height of room: ");
+            while (!scnr.hasNextDouble()) {
+                String input3 = scnr.next();
+                System.out.println(input3 + "is not a valid number.");
+                System.out.print("Enter height of room: ");
+            }
+            heightOfRoom = scnr.nextDouble();
+        } while (heightOfRoom < 0);
 
                 //Takes user input and calculates area and perimeter of room
                 double areaOfRoom = lengthOfRoom * widthOfRoom;
