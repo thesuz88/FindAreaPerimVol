@@ -23,10 +23,15 @@ public class Main {
             lengthOfRoom = scnr.nextDouble();
             } while (lengthOfRoom < 0);
 
-
-                //User entered width of room
-                System.out.println("Enter width of room: ");
-                widthOfRoom = scnr.nextDouble();
+        do {
+            //User entered width of room
+            System.out.println("Enter width of room: ");
+            while (!scnr.hasNextDouble()) {
+                String input2 = scnr.next();
+                System.out.println(input2 + " is not a valid number. Enter width of room: ");
+            }
+            widthOfRoom = scnr.nextDouble();
+        } while (widthOfRoom < 0);
 
                 //User entered height of room
                 System.out.println("Enter height of room: ");
