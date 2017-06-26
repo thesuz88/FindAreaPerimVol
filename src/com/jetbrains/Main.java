@@ -12,35 +12,42 @@ public class Main {
             System.out.println("Welcome to Grand Circus' Room Detail Generator!");
             System.out.println(" ");
 
-
-        while (true) {
+        while(true) {
+        do {
             //User entered length of room
             System.out.println("Enter length of room: ");
-                lengthOfRoom = scnr.nextDouble();
+            while (!scnr.hasNextDouble()) {
+                String input = scnr.next();
+                System.out.println(input + " is not a valid number. Enter length of room: ");
+            }
+            lengthOfRoom = scnr.nextDouble();
+            } while (lengthOfRoom < 0);
+
 
                 //User entered width of room
-            System.out.println("Enter width of room: ");
+                System.out.println("Enter width of room: ");
                 widthOfRoom = scnr.nextDouble();
 
                 //User entered height of room
-            System.out.println("Enter height of room: ");
-            heightOfRoom = scnr.nextDouble();
+                System.out.println("Enter height of room: ");
+                heightOfRoom = scnr.nextDouble();
 
                 //Takes user input and calculates area and perimeter of room
-            double areaOfRoom = lengthOfRoom * widthOfRoom;
-            double perimOfRoom = 2 * lengthOfRoom + 2 * widthOfRoom;
-            double volOfRoom = lengthOfRoom * widthOfRoom * heightOfRoom;
+                double areaOfRoom = lengthOfRoom * widthOfRoom;
+                double perimOfRoom = 2 * lengthOfRoom + 2 * widthOfRoom;
+                double volOfRoom = lengthOfRoom * widthOfRoom * heightOfRoom;
 
                 //Prints out calculated area, perimeter, and volume and asks user if they would like to continue
-            System.out.println("Area: " + areaOfRoom);
-            System.out.println("Perimeter: " + perimOfRoom);
-            System.out.println("Volume: " + volOfRoom);
-            System.out.println(" ");
-            System.out.println("Continue? (y/n): ");
+                System.out.println("Area: " + areaOfRoom);
+                System.out.println("Perimeter: " + perimOfRoom);
+                System.out.println("Volume: " + volOfRoom);
+                System.out.println(" ");
+                System.out.println("Continue? (y/n): ");
 
                 //If user enters "n" loop breaks
-            if (scnr.next().equals("n")) {
-                break;
+                if (scnr.next().equals("n")) {
+                    break;
+                }
             }
 
         }
@@ -48,4 +55,4 @@ public class Main {
 
 
     }
-}
+
