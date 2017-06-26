@@ -12,22 +12,17 @@ public class Main {
             System.out.println("Welcome to Grand Circus' Room Detail Generator!");
             System.out.println(" ");
 
-        do {
+
+        while (true) {
             //User entered length of room
             System.out.println("Enter length of room: ");
-
-            while (!scnr.nextDouble()) {
-                System.out.println("Please only enter a number.");
-                System.out.println("Enter length of room: ");
                 lengthOfRoom = scnr.nextDouble();
-            }
-        }
-        while (true) {
 
                 //User entered width of room
             System.out.println("Enter width of room: ");
                 widthOfRoom = scnr.nextDouble();
 
+                //User entered height of room
             System.out.println("Enter height of room: ");
             heightOfRoom = scnr.nextDouble();
 
@@ -43,7 +38,7 @@ public class Main {
             System.out.println(" ");
             System.out.println("Continue? (y/n): ");
 
-                //If user enters "y" loop continues, if user enters "n" loop breaks
+                //If user enters "n" loop breaks
             if (scnr.next().equals("n")) {
                 break;
             }
